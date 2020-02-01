@@ -183,4 +183,92 @@
       }
     }
   }
+
+
+	//=================================================================================================================
+	// Recipe: Hand of Midas
+	//=================================================================================================================
+	"item_recipe_imba_hand_of_midas"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2005"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"custom/imba_recipe"
+		"Model"							"models/props_gameplay/recipe.mdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"50"
+		"ItemShopTags"					""
+		"ItemAliases"					"midas; hand of midas; hom"
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_imba_hand_of_midas"
+		"ItemRequirements"
+		{
+			"01"						"item_gloves"
+		}
+	}
+
+//=================================================================================================================
+	// Hand of Midas
+	//=================================================================================================================
+	"item_imba_hand_of_midas"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2006"
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityTextureName" 			"item_example_item"
+		"ScriptFile"					"components/items/item_midas.lua"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"90.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"410"
+		"ItemShopTags"					"attack_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"midas; hand of midas; hom"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"xp_multiplier"			"1.85"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_gold"			"160"
+			}
+			// Hardcoded into the gold gain filter
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"passive_gold_bonus"	"5"
+			}
+		}
+	}
 }
