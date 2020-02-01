@@ -1,13 +1,28 @@
 "AddonInfo"
 {
+	"addontitle"					"Dota 3"
+	"addon_game_name"				"Dota 3"
+	"addonversion"					"7.24"
+	"addontagline"					"Dota 3"
+	"addonauthor"					"CarryBrownstein OctarineSorcerer Elepetrovs"
+	"addonContent_Campaign"			"0"
+	"addonDescription"				"A modified version of Dota, where the story ocntinues."
+	"HeroGuidesSupported"			"1"
+	"PenaltiesEnabled"				"1"
+	"CheckAFKPlayers"				"1"
+	"EnablePickRules"				"1"
   "TeamCount" "10"
-  "maps"      "template_map playground"
+  "maps"      "default_dota template_map playground"
   "IsPlayable"  "1"
   "template_map"
   {
           "MaxPlayers"                    "10"
   }
   "playground"
+  {
+          "MaxPlayers"                    "10"
+  }
+  "default_dota"
   {
           "MaxPlayers"                    "10"
   }

@@ -213,7 +213,7 @@
 		}
 	}
 
-//=================================================================================================================
+  //=================================================================================================================
 	// Hand of Midas
 	//=================================================================================================================
 	"item_imba_hand_of_midas"
@@ -226,7 +226,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"AbilityTextureName" 			"item_example_item"
+		"AbilityTextureName" 			"custom/item_imba_hand_of_midas"
 		"ScriptFile"					"components/items/item_midas.lua"
 
 		// Stats
@@ -238,7 +238,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
-		"ItemCost"						"410"
+		"ItemCost"						"450"
 		"ItemShopTags"					"attack_speed;hard_to_tag"
 		"ItemQuality"					"common"
 		"ItemAliases"					"midas; hand of midas; hom"
@@ -268,6 +268,45 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"passive_gold_bonus"	"5"
+			}
+		}
+	}
+
+  //=================================================================================================================
+	// Hammer Handle
+	//=================================================================================================================
+	"item_hammer_handle"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"components/items/item_hammer_handle"
+		"AbilityTextureName"			"custom/HammerHandle"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2007"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+
+    "ItemCost"						"20"
+		"ItemShopTags"				"range;armor;damage"
+		"ItemAliases"					"handle"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"base_attack_range"		"35"
 			}
 		}
 	}
