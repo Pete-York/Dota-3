@@ -1,5 +1,55 @@
 "DOTAAbilities"
 {
+  // Hammer time
+  "item_world_walker"
+  {
+    "ID"              "4242"
+    "AbilityBehavior"       " DOTA_ABILITY_BEHAVIOR_POINT"
+    //"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    // How the hell do I make it target space gong
+    //"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_CUSTOM"
+    "BaseClass"           "item_datadriven"
+    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_4"
+    // Eh looks spacey enough
+    "AbilityTextureName"      "item_example_item"
+
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemCost"            "0"
+    "ItemPurchasable"          "0"
+    "ItemKillable"             "0"
+    "ItemDroppable"            "0"
+    "ItemSellable"             "0"
+    "ItemCanChangeContainer"   "0"
+    "ItemQuality"					"artifact"
+    "ScriptFile"					"items/world_walker.lua"
+    
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    //"AbilityCastRange"        "900"
+    //"AbilityCastPoint"        "0.2"
+    "AbilityCooldown"       "15.0"
+    "AbilityManaCost"       "100"
+    "ItemInitialCharges"      "0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"       "0 0 0 0"
+
+    "OnChannelSucceeded"
+		{
+			"RunScript"
+		    {
+		        "ScriptFile"			"items/world_walker.lua" //create a folder named lua_item in "your_game_mode\scripts\vscripts" and create a text file called chest.lua
+            "Function"				"try_win" // here we call the function
+            "chest_name"				"chest_1" // here you can give a name to this chest in case you want more than 1 chest type 
+            "gold"				"1" // does this chest give gold or only item ? (0 = no gold , 1 = gold instead of item , 2 = gold + item)
+            "gold_amt"				"1500" // how many gold the chest give if it give out
+            "gold_rand"				"250" // if you want gold to be random
+		    }
+		}
+  }
+
   "item_containers_lua_pack"
   {
     // General
