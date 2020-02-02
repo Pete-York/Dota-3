@@ -11,6 +11,7 @@
     function item_mad_moon_shard:GetIntrinsicModifierName() return "modifier_item_mad_moon_shard" end
     
     function item_mad_moon_shard:OnSpellStart()
+      DebugPrint("[BAREBONES] hello ")
       local caster = self:GetCaster()
       if caster:IsTempestDouble() then return end
       local pos = caster:GetAbsOrigin()

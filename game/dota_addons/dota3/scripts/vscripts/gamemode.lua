@@ -80,7 +80,8 @@ end
 ]]
 function GameMode:OnFirstPlayerLoaded()
   DebugPrint("[BAREBONES] First Player has loaded")
-  CreateUnitByName("npc_dota_hero_axe", Vector(0,0,0), true, nil, nil, DOTA_TEAM_BADGUYS)
+  CreateUnitByName("npc_dota_hero_axe", Vector(1000,1000,0), true, nil, nil, DOTA_TEAM_BADGUYS)
+  CreateUnitByName("npc_dota_hero_axe", Vector(0,0,0), true, nil, nil, DOTA_TEAM_GOODGUYS)
 end
 
 --[[

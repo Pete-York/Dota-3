@@ -231,7 +231,7 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"999999"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"90.0"
 
@@ -401,37 +401,35 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"2009"
+		"ID"							"2010"
 		"BaseClass"						"item_lua"
 		"AbilityTextureName" 			"item_smoke"
 		"ScriptFile"					"components/items/item_smoke_of_plane.lua"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"Model"							"models/props_gameplay/cheese.vmdl"
 
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"1.0"
-		"AbilityManaCost"				"0"
+		"AbilityCastRange"				"1200"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"10"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemShopTags"					"consumable"
-		"ItemQuality"					"epic"
-		"ItemAliases"					"cheese; gruyere; camembert"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShopTags"					"smoke;deceit;plane"
+		"ItemAliases"					"smoke;smoke of smoke;invis "
 		"ItemStackable"					"1"
-		//"ItemPermanent"					"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemQuality"					"common"
 		"ItemInitialCharges"			"1"
-		//"ItemKillable"					"1"
-		"ItemPurchasable"				"1"
-		"ItemSellable"					"1"
-		"IsTempestDoubleClonable"		"0"
+		"ItemPermanent"					"1"
+		"ItemRequiresCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemKillable" 					"1" 
+		"ItemSellable" 					"1"
+		"ItemSupport"					"1"
   }
   //-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"

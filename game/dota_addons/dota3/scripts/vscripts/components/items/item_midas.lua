@@ -89,7 +89,6 @@ function item_imba_hand_of_midas:OnSpellStart()
 	-- Parameters and calculations
 	local bonus_gold = ability:GetSpecialValueFor("bonus_gold")
 	local xp_multiplier = ability:GetSpecialValueFor("xp_multiplier")
-	local passive_gold_bonus = ability:GetSpecialValueFor("passive_gold_bonus")
 	local bonus_xp = target:GetDeathXP()
 
 	-- Adjust for the lobby settings and for midas' own bonuses
