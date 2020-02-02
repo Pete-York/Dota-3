@@ -11,3 +11,4 @@
 # Recursively allow files under the folders we want
 !/content/dota_addons/dota3/**
 !/game/dota_addons/dota3/**
+!/dota3documents/**
