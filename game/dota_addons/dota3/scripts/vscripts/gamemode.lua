@@ -80,6 +80,7 @@ end
 ]]
 function GameMode:OnFirstPlayerLoaded()
   DebugPrint("[BAREBONES] First Player has loaded")
+  CreateUnitByName("npc_dota_hero_axe", Vector(0,0,0), true, nil, nil, DOTA_TEAM_BADGUYS)
 end
 
 --[[
@@ -104,7 +105,15 @@ function GameMode:OnHeroInGame(hero)
   hero:SetGold(99999, false)
 
   -- These lines will create an item and add it to the player, effectively ensuring they start with the item
-  local item = CreateItem("item_example_item", hero, hero)
+  local item = CreateItem("item_mad_moon_shard", hero, hero)
+  hero:AddItem(item)
+  local item = CreateItem("item_imba_hand_of_midas", hero, hero)
+  hero:AddItem(item)
+  local item = CreateItem("item_hammer_handle", hero, hero)
+  hero:AddItem(item)
+  local item = CreateItem("item_just_cheese", hero, hero)
+  hero:AddItem(item)
+  local item = CreateItem("item_smoke_of_plane", hero, hero)
   hero:AddItem(item)
 
   --[[ --These lines if uncommented will replace the W ability of any hero that loads into the game
