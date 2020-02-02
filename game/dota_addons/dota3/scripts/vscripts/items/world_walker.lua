@@ -5,7 +5,26 @@ end
 
 print("World Walker script loaded!!")
 
+function item_world_walker:CastFilterResultTarget( hTarget ) 
+    -- return UF_SUCCESS
+    -- if IsServer() then
+	-- 	if not target:GetUnitName() == "npc_space_gong" then
+	-- 		return UF_FAIL_CUSTOM
+	-- 	end
+	-- 	return UF_SUCCESS
+	-- end
+    return UF_SUCCESS
+end
+
+function item_world_walker:GetCustomCastErrorTarget(target) 
+	if IsServer() then
+		print("Wrong target message..")
+		return "#dota_hud_error_cast_only_spacegong"
+	end
+end
+
 function item_world_walker:OnSpellStart()
+	DebugPrint("I have did a thing!")
 	local hCaster = self:GetCaster() --We will always have Caster.
 	local hTarget = false --We might not have target so we make fail-safe so we do not get an error when calling - self:GetCursorTarget()
 	if not self:GetCursorTargetingNothing() then
@@ -17,8 +36,6 @@ function item_world_walker:OnSpellStart()
     local nClamp = 960 --If we try to over reach we use this value instead. (this is mechanic from blink dagger.)
     
     hCaster:EmitSound("DOTA_Item.BlinkDagger.Activate") --Emit sound for the blink
-
-    DebugPrint("I have did a thing!")
     if hTarget == nil then
         return
     end

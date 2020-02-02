@@ -4,10 +4,10 @@
   "item_world_walker"
   {
     "ID"              "4242"
-    "AbilityBehavior"       " DOTA_ABILITY_BEHAVIOR_POINT"
-    //"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityBehavior"       " DOTA_ABILITY_BEHAVIOR_POINT_TARGET"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
     // How the hell do I make it target space gong
-    //"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_CUSTOM"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_ALL"
     "BaseClass"           "item_datadriven"
     "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_4"
     // Eh looks spacey enough
@@ -21,14 +21,14 @@
     "ItemSellable"             "0"
     "ItemCanChangeContainer"   "0"
     "ItemQuality"					"artifact"
-    "ScriptFile"					"items/world_walker.lua"
+    "ScriptFile"					"items/item_world_walker.lua"
     
 
     // Stats
     //-------------------------------------------------------------------------------------------------------------
     //"AbilityCastRange"        "900"
     //"AbilityCastPoint"        "0.2"
-    "AbilityCooldown"       "15.0"
+    "AbilityCooldown"       "1"
     "AbilityManaCost"       "100"
     "ItemInitialCharges"      "0"
 

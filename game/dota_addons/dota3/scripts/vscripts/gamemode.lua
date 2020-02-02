@@ -78,8 +78,16 @@ end
   This function is called once and only once as soon as the first player (almost certain to be the server in local lobbies) loads in.
   It can be used to initialize state that isn't initializeable in InitGameMode() but needs to be done before everyone loads in.
 ]]
-function GameMode:OnFirstPlayerLoaded()
+function GameMode:OnFirstPlayerLoaded() 
   DebugPrint("[BAREBONES] First Player has loaded")
+
+  gongEntity = Entities:FindAllByName("space_gong_spawn")
+  DebugPrintTable(gongEntity)
+  gongEntity = CreateUnitByName("npc_space_gong", gongEntity:GetAbsOrigin(), false, nil, nil, DOTA_TEAM_GOODGUYS)
+  gongEntity:SetForwardVector(Vector(1,0,0))
+
+  DebugPrint("[DOTA 3] Space gong is in!")
+  --privateBankEnt:SetModel("models/props_debris/merchant_debris_chest002.vmdl")
 end
 
 --[[

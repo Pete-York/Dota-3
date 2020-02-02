@@ -44,7 +44,7 @@ if GetMapName() == "playground" then
     phys:SetModelScale(1.5)
 
     local items = {}
-0    local slots = {1,2,3,4}
+    local slots = {1,2,3,4}
     for i=1,RandomInt(1,3) do
       items[table.remove(slots, RandomInt(1,#slots))] = RandomItem()
     end
